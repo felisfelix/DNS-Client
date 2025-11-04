@@ -44,7 +44,7 @@ void dns(){
 	}
 	int on = 1;
   	setsockopt (fd, IPPROTO_IP, IP_HDRINCL, &on, sizeof (int));
-  	uint8_t *buf = calloc(1, 300); //check this;it`s likely false //payload!
+  	uint8_t *buf = calloc(1, 300); 
   	struct iphdr *iph = (struct iphdr*)buf;
   	struct udphdr *udph = (struct udphdr*)(buf+20);
 	DNSHeader *header = (DNSHeader*)(buf+20+8);
